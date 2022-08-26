@@ -147,7 +147,7 @@
         left: 0;
         z-index: 3;
         height: auto;
-        display: none;
+        display: block;
     }
 
     #menu ul.menus {
