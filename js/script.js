@@ -10,6 +10,16 @@ $(function () {
     });
 });
 
+$('#menu ul').on("mouseover", function () {
+    $('#menu ul').css("display", "block")
+})
+
+// ESC keyboard press close hamburger menu
+$(document).on('keydown', function (event) {
+    if (event.key == "Escape") {
+        $('#menu ul').css("display", "none")
+    }
+});
 
 /* When the user clicks on the button, 
    toggle between hiding and showing the dropdown content */
@@ -31,7 +41,7 @@ window.onclick = function (event) {
     }
 }
 
-
+// SLICK SLIDERS
 $('.usp').slick({
     dots: false,
     infinite: true,
@@ -55,6 +65,9 @@ $('.usp').slick({
         {
             breakpoint: 427,
             settings: {
+                arrows: true,
+                prevArrow: '<i class="fa-solid fa-angle-left"></i>',
+                nextArrow: '<i class="fa-solid fa-angle-right"></i>',
                 slidesToShow: 1,
                 slidesToScroll: 1
             }
@@ -211,20 +224,4 @@ $('.bannersection').slick({
     slidesToScroll: 1,
     // autoplay: true,
     // autoplaySpeed: 3000,
-    // responsive: [
-    //     {
-    //         breakpoint: 821,
-    //         settings: {
-    //             slidesToShow: 2,
-    //             slidesToScroll: 1
-    //         }
-    //     },
-    //     {
-    //         breakpoint: 426,
-    //         settings: {
-    //             slidesToShow: 1,
-    //             slidesToScroll: 1
-    //         }
-    //     }
-    // ]
 });
