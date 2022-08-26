@@ -10,16 +10,18 @@ $(function () {
     });
 });
 
-$('#menu ul').on("mouseover", function () {
-    $('#menu ul').css("display", "block")
-})
+if (screen.width < 769) {
+    $('#menu ul').on("mouseover", function () {
+        $('#menu ul').css("display", "block")
+    })
 
-// ESC keyboard press close hamburger menu
-$(document).on('keydown', function (event) {
-    if (event.key == "Escape") {
-        $('#menu ul').css("display", "none")
-    }
-});
+    // ESC keyboard press close hamburger menu
+    $(document).on('keydown', function (event) {
+        if (event.key == "Escape") {
+            $('#menu ul').css("display", "none")
+        }
+    });
+}
 
 /* When the user clicks on the button, 
    toggle between hiding and showing the dropdown content */
